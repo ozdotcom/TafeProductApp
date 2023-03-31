@@ -49,7 +49,7 @@ namespace ProductApps
 
         //    //totalPayment = totalPaymentTextBlock.Text;
             
-        //    //int totalCharge  =  TotalPayment + 25; 
+        //    //int totalCharge  =  TotalPayment + 25 + 5; 
         //    //totalChargeTextBlock.Text = Convert.ToString(delivery.totalPayment);
         //   //return totalCharge;
         //}
