@@ -41,19 +41,31 @@ namespace ProductApps
             {
                 MessageBox.Show("Enter data again", "Data Entry Error");
             }
-           // calTotalCharge();
-            //totalPaymentTextBlock.Text = totalPayment;
+            calTotalCharge();
+            calTotalWrap();
+            calTotalGST();
         }
-        //private double calTotalCharge()
-        //{
-
-        //    //totalPayment = totalPaymentTextBlock.Text;
-            
-        //    //int totalCharge  =  (TotalPayment + 25 + 5)*1.1; 
-        //    //totalChargeTextBlock.Text = Convert.ToString(delivery.totalPayment);
-        //   //return totalCharge;
-        //}
-
+        private double calTotalCharge()
+        {
+            double totalPayment = (double)Convert.ToDecimal(totalPaymentTextBlock.Text);
+            double totalCharge = totalPayment + 25;
+            totalChargeTextBlock.Text = totalCharge.ToString();
+            return totalCharge;
+        }
+        private double calTotalWrap()
+        {
+            double totalPayment = (double)Convert.ToDecimal(totalPaymentTextBlock.Text);
+            double totalCharge = (totalPayment + 25 + 5);
+            totalWrapTextBlock.Text = totalCharge.ToString();
+            return totalCharge;
+        }
+        private double calTotalGST()
+        {
+            double totalPayment = (double)Convert.ToDecimal(totalPaymentTextBlock.Text);
+            double totalCharge = (totalPayment + 25 + 5) * 1.1;
+            totalGSTTextBlock.Text = totalCharge.ToString();
+            return totalCharge;
+        }
         private void clearButton_Click(object sender, RoutedEventArgs e)
         {
             productTextBox.Text = "";
